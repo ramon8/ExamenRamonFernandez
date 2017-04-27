@@ -14,11 +14,11 @@ public class ParameterizedJunitTest {
 	private int expected, actual;
 	private double delta;
 	
-	private PrimeNumber primeNumber;
+	private Primordial primordial;
 	
 	@Before
 	public void initialize() {
-		primeNumber = new PrimeNumber();
+		primordial = new Primordial();
 	}
 
 	public ParameterizedJunitTest(int expected, int actual, double delta) {
@@ -46,6 +46,6 @@ public class ParameterizedJunitTest {
 	@Test
 	public void testPrimeNumber() {
 		System.out.println("Parameterized Number is : " + actual);
-		Assert.assertEquals(expected, primeNumber.isPrime(actual), delta);
+		Assert.assertEquals(expected, primordial.get_primordial(actual), delta);
 	}
 }
